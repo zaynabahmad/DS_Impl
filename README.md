@@ -1,4 +1,4 @@
-# Stack Data Structure
+# 1.Stack Data Structure
 
 ##### This is a simple implementation of the stack data structure in C language using linked list. The project consists of four files: stack.h, stack.c, main.c, and Makefile.
 
