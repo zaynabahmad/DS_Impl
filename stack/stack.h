@@ -30,7 +30,9 @@ bool StackFull(Stack *ps);
 void ClearStack(Stack *ps);
 int StackSize(Stack *ps);
 StackEntry FindMin(Stack *ps);
-StackEntry Top_FirstElement(Stack *ps);
-void destroy_stack(Stack *ps);
+StackEntry Peek(Stack *ps);
+void DestroyStack(Stack *ps);
+int FirstElementAdded(Stack* ps);
+void CopyStack (Stack *ps , Stack *ps2);
 
 #endif 
