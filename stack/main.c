@@ -134,6 +134,65 @@ void test_CopyStack() {
     ClearStack(&s2);
 }
 
+void test_Matching_parentheses() {
+   StackEntry valid_str[] = {'(', '[', ']', '(', ')', '{', '}' ,')', '(', '[', ']', ')', '\0'};
+    int result = Matching_parentheses(valid_str);
+    assert(result == 1);
+    printf("test 1 comlete with valid str\n");
+    
+    // Test with an invalid string missing closing parenthesis
+    StackEntry invalid_str[] = {'(', '[', ']', '(', ')', '{', '}' ,')', '(', '[', ']', '\0'};
+    assert(Matching_parentheses(invalid_str) == 0);
+    printf("test 2 comlete with invalid str\n");
+    
+    // Test with an invalid string with mismatched parenthesis
+    StackEntry invalid_str2[] = {'(', '[', ']', '(', '}', '{', '}' ,')', '(', '[', ']', ')', '\0'};
+    assert(Matching_parentheses(invalid_str2) == 0);
+    printf("test 3 comlete with invalid str with mismatched parenthesis\n");
+    
+    // Test with an empty string
+    StackEntry empty_str[] = {'\0'};
+    assert(Matching_parentheses(empty_str) == 1);
+    printf("test 4 comlete with empty str\n");
+}
+
+/* for test the trsverse stack */
+    int arr[3];
+    int i = 0;
+
+    // Define a function to add elements to the array
+    void add_to_array(StackEntry e) {
+        arr[i++] = e;
+    }
+
+void test_traverse_stack() {
+    // Create a new stack
+    Stack s;
+    CreateStack(&s);
+
+    // Push some elements onto the stack
+    Push(1, &s);
+    Push(2, &s);
+    Push(3, &s);
+
+    // Create an array to hold the elements
+    
+
+    // Traverse the stack, adding elements to the array
+    TraverseStack(&s, add_to_array);
+
+    // Check that the elements were added in the correct order
+    assert(arr[0] == 3);
+    assert(arr[1] == 2);
+    assert(arr[2] == 1);
+
+    // Destroy the stack
+    DestroyStack(&s);
+}
+
+
+
+
 
 int main() {
   test_push();
@@ -145,6 +204,8 @@ int main() {
   test_stack_empty();
   test_FirstElementAdded();
   test_CopyStack();
+  test_Matching_parentheses();
+  test_traverse_stack(); 
    
 
     printf("All tests passed successfully.\n");

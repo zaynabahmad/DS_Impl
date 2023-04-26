@@ -9,7 +9,7 @@
 #define stack_H_
 #include <stdbool.h>
 
-typedef int StackEntry;
+typedef char StackEntry;
 
 typedef struct stack_node {
     StackEntry entry;
@@ -33,6 +33,8 @@ StackEntry FindMin(Stack *ps);
 StackEntry Peek(Stack *ps);
 void DestroyStack(Stack *ps);
 int FirstElementAdded(Stack* ps);
+void TraverseStack(Stack *ps, void(*pf)(StackEntry));
 void CopyStack (Stack *ps , Stack *ps2);
+int Matching_parentheses(StackEntry *ptr );
 
 #endif 

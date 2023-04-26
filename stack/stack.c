@@ -1,8 +1,10 @@
 /**
- * Implementation of a stack data structure with a minimum function that returns
- * the minimum value in the stack in constant time. The minimum value is stored
- * in a separate stack and updated when new elements are pushed or popped. The 
- * stack is implemented using a singly-linked list with a pointer to the top node.
+ * Implementation of a stack data structure with along with its operations, 
+ * so that it supports a function FindMin, which is Θ(1).
+ * and a function that returns the first element in a stack.
+ * and a function to destroy a stack.
+ * and a function to copy a stack to another.
+ * and a function to return the size of a stack
  * 
  * Author: [Zaynap]
  * Date: 
@@ -37,7 +39,7 @@ void Push(StackEntry e, Stack *ps) {
     // Allocate memory for new stack node
     StackNode *pn = (StackNode*) malloc(sizeof(StackNode));
     if (pn == NULL) {
-        printf("Error: Could not allocate memory for new node\n");  //error
+        printf("Error: Could not allocate memory for new node\n");  
         exit(1);
     }
 
@@ -55,7 +57,7 @@ void Push(StackEntry e, Stack *ps) {
     }
     StackNode *min_node = (StackNode*) malloc(sizeof(StackNode));
     if (min_node == NULL) {
-        printf("Error: Could not allocate memory for new minimum node\n");  //error
+        printf("Error: Could not allocate memory for new minimum node\n");  
         free(pn);
         exit(1); 
     }
