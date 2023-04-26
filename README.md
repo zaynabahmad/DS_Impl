@@ -1,6 +1,6 @@
 # 1.Stack Data Structure
 
-##### This is a simple implementation of the stack data structure in C language using linked list. The project consists of four files: stack.h, stack.c, main.c, and Makefile.
+##### This is a simple implementation of the stack data structure in C language using linked list. The project consists of five files: stack.h, stack.c, main.c, Matching_paranteses and Makefile.
 
 ### Requirements
 ##### To compile and run the project, you need a C compiler installed on your system, such as gcc.
