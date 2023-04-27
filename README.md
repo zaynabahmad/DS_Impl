@@ -18,7 +18,7 @@ This will generate an executable file called stack in the same directory.
 This will run the main function in main.c and test the stack implementation.
 
 ### Modifying the Code
-##### If you want to modify the code, you can edit the source files stack.h, stack.c, and main.c. After modifying the code, you can recompile the project by running the make command again.
+##### If you want to modify the code, you can edit the source files stack.h, Matching_paranteses.c and main.c. After modifying the code, you can recompile the project by running the make command again.
 
 
 
