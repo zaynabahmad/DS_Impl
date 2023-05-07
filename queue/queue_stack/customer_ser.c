@@ -28,7 +28,7 @@ void addCustomer() {
 
     // add customer to queue
     if (!isQueueFull(&carQueue)) {
-        enqueue(customer.id, &carQueue);
+        Append(customer.id, &carQueue);
         printf("Customer added to waiting list.\n");
     } else {
         printf("Waiting list is full, please try again later.\n");
@@ -40,7 +40,7 @@ void serveCustomer() {
     if (!isQueueEmpty(&carQueue)) {
         // get customer from queue
         ElementType customer;
-        dequeue(&customer.id, &carQueue);
+        serve(&customer.id, &carQueue);
 
         // push customer onto stack
         if (!isStackFull(&carStack)) {
@@ -63,16 +63,16 @@ void displayWaitingCustomers() {
     printf("Customers currently waiting:\n");
     while (!isQueueEmpty(&carQueue)) {
         ElementType customer;
-        dequeue(&customer.id, &carQueue);
+        serve(&customer.id, &carQueue);
         printf("%s (ID: %d, Model Year: %d)\n", customer.name, customer.id, customer.model_year);
-        enqueue(customer.id, &tempQueue);
+        Append(customer.id, &tempQueue);
     }
 
     // add customers back to original queue
     while (!isQueueEmpty(&tempQueue)) {
     ElementType customer;
-    dequeue(&customer.id, &tempQueue);
-    enqueue(customer.id, &carQueue);
+    serve(&customer.id, &tempQueue);
+    Append(customer.id, &carQueue);
     }
     }
 
@@ -84,7 +84,7 @@ CreateStack(&tempStack);
 // serve all customers and add them to temporary stack
 while (!isQueueEmpty(&carQueue)) {
     ElementType customer;
-    dequeue(&customer.id, &carQueue);
+    serve(&customer.id, &carQueue);
     push(customer, &tempStack);
 }
 
@@ -94,6 +94,7 @@ while (!isStackEmpty(&tempStack)) {
     ElementType customer;
     pop(&customer, &tempStack);
     printf("%s (ID: %d, Model Year: %d)\n", customer.name, customer.id, customer.model_year);
-    enqueue(customer.id, &carQueue);
+    Append(customer.id, &carQueue);
 }
     }
+
