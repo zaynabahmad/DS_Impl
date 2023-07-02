@@ -40,8 +40,6 @@ typedef struct list{
     ListEntry list[MAXLIST];
 }list;
 
-
-
 void CreateList(list *pl);
 int ListEmpty(list *pl);
 int ListFull(list *pl);

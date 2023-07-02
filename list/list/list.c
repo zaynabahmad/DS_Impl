@@ -16,6 +16,7 @@
 
 /*****************array based *********************/
 
+
 /**
  * @brief Create a List object
  * 
@@ -114,7 +115,7 @@ void RetrieveList(int p, ListEntry *pe, list *pl){
 /**
  * @brief Replace an element in the list at a specified position
  * 
- * @param p the position of the element to replace
+ * @param p: the position of the element to replace
  * @param e the new element to replace with
  * @param pl 
  */
