@@ -12,7 +12,7 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
-#include "global.h"
+#include "../global.h"
     #define MAXQUEUE 100  
     #define QueueEntry int
 

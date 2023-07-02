@@ -12,7 +12,7 @@
 #ifndef STACK_H
 #define STACK_H
 
-#include "global.h"
+#include "../global.h"
 
 typedef struct {
   int top;

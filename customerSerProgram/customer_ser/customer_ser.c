@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "global.h"
-#include "stack.h"
-#include "queue.h"
+#include "../global.h"
+#include "../stack/stack.h"
+#include "../queue/queue.h"
 #include "customer_ser.h"
 
 Stack carStack;

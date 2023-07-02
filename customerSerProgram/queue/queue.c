@@ -52,7 +52,7 @@ void Append(QueueEntry e, Queue *pq) {
  * @param pe pointer to the variable that will hold the removed element
  * @param pq pointer to the queue
  */
-void Serve(QueueEntry *pe, Queue *pq) {
+void serve(QueueEntry *pe, Queue *pq) {
     // Set the removed element to the entry at the front index
     *pe = pq->entry[pq->front];
     // Increment the front index and use modular arithmetic to ensure it stays within bounds
@@ -67,7 +67,7 @@ void Serve(QueueEntry *pe, Queue *pq) {
  * @param pq pointer to the queue
  * @return 1 if the queue is empty, 0 otherwise
  */
-int QueueEmpty(Queue *pq) {
+int isQueueEmpty(Queue *pq) {
     // If the size of the queue is 0, it is empty
     return !pq->size;
 }
@@ -78,7 +78,7 @@ int QueueEmpty(Queue *pq) {
  * @param pq pointer to the queue
  * @return 1 if the queue is full, 0 otherwise
  */
-int QueueFull(Queue *pq) {
+int isQueueFull(Queue *pq) {
     // If the size of the queue is equal to the maximum queue size, it is full
     return (pq->size == MAXQUEUE);
 }

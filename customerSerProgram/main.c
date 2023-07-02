@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "global.h"
-#include "stack.h"
-#include "queue.h"
-#include "customer_ser.h"
+#include "stack/stack.h"
+#include "queue/queue.h"
+#include "customer_ser/customer_ser.h"
 
 // global variables
 Stack carStack;
