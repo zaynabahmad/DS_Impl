@@ -10,16 +10,16 @@
 #include <stdbool.h>
 
 typedef char StackEntry;
-
+/*linked impl*/
 typedef struct stack_node {
     StackEntry entry;
     struct stack_node *next;
 } StackNode;
 
 typedef struct stack {
-    StackNode *top;
-    StackNode *min_top;
-    StackEntry Size;
+    StackNode *top; // aointer to the stacknode 
+    StackNode *min_top; //pointer to the minumium element in the stack 
+    StackEntry Size; //a field to hold the size 
 } Stack;
 
 void CreateStack(Stack *ps);

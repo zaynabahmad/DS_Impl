@@ -136,6 +136,7 @@ void TraverseList(list *pl ,void (*Vist)(ListEntry)){
     for(i=0;i<pl->size;i++){
         (*Vist)(pl->list[i]);
 }
+}
 
 #else 
 
